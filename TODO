@@ -1,0 +1,30 @@
+cmake:
+  - hardcoding a check for -O2 in the benchmark doesn't seem like the proper solution
+
+general:
+  - document stuff:
+    - especially that value_copy_fn / key_copy_fns need to be written in a way as to not change the original ptr's values if it's going to return an error
+
+  - test alloc fail paths
+  - rewrite tests / benchmark with actual C unit test / benchmark tools
+
+array:
+  - optionally generate _append, _insert, _insert_no_bound_check variants which take value pointers
+  - allow overriding capacity grow logic + test w/ overridden capacity grow logic
+  - test pointer _append, _insert, _insert_no_bound_check variants
+
+hashmap:
+  - optionally generate _insert variants which take value or key pointers
+  - test w/ overridden capacity grow / shrink logic, grow / shrink thresholds
+  - test pointer _insert variants
+
+string:
+  - optimize instead of this placeholder impl
+  - utf8 variant which handles character pops / etc correctly
+  - utf8_char type
+  - small string optimization
+  - string append functions which take other strings, etc
+
+hash functions:
+  - should have a more uniform interface?
+  - seeds are currently hardcoded - should have a fallback default and a ccl_hash_init_seed() function which changes that variable
