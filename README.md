@@ -4,7 +4,7 @@ Check TODO for stuff still required before 1.0. \
 Also C++ compatible. \
 Currently providing hashmaps, (optionally) safe dynamic arrays and strings. \
 Functions which generate strings from primitives (like floats), are also planned for the future. \
-Attempts to gracefully handles allocation failures instead of abort()ing.
+Attempts to gracefully handle allocation failures instead of abort()ing.
 
 ## How to build tools (tests and benchmark)
 CMake, ccl/tools is the source directory. \
